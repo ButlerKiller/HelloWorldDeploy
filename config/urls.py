@@ -4,7 +4,7 @@ import os
 
 
 def HelloWorldView(request):
-    return HttpResponse('Hello world!')
+    return HttpResponse('<h1>КИТИС - это пиздец, а не anal. Скоро здесь появится ремастер расписания, а пока ждём. (•ω•`)o</h1>')
 
 
 urlpatterns = [
