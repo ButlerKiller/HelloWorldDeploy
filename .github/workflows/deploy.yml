@@ -17,8 +17,8 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            cd /home/django/myproject
-            git pull
-            poetry run python manage.py migrate --noinput
-            poetry run python manage.py collectstatic --noinput
-            sudo systemctl restart gunicorn
+                cd /home/django/myproject
+                git pull
+                /home/django/.local/bin/poetry run python manage.py migrate --noinput
+                /home/django/.local/bin/poetry run python manage.py collectstatic --noinput
+                sudo systemctl restart gunicorn
